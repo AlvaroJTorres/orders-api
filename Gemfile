@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.0.4"
 
 gem 'dotenv-rails'
+gem 'multi_json'
 gem 'reform', '>= 2.2.0'
 gem 'reform-rails'
 gem 'representable'
