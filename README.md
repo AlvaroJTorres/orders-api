@@ -1,24 +1,57 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# orders-api
 
-Things you may want to cover:
+## Install
 
-* Ruby version
+### Clone the repository
 
-* System dependencies
+```shell
+git clone https://github.com/AlvaroJTorres/orders-api.git
+```
 
-* Configuration
+### Install dependencies
 
-* Database creation
+```shell
+bundle install
+```
 
-* Database initialization
+### Configuration
 
-* How to run the test suite
+You may want to initiate your server and create a database and run the migrations
 
-* Services (job queues, cache servers, search engines, etc.)
+```shell
+rails db:create
+rails db:migrate
+```
 
-* Deployment instructions
+Also it may require you to create an .env file in the root directory to handle Enviromental Variables for the Database
 
-* ...
+The .env file should contain the following
+
+```shell
+DB_USERNAME=(insert your db username here)
+DB_PASSWORD=(insert your db password here)
+```
+
+You can also seed the db with example data for testing
+
+```shell
+rails db:seed
+```
+
+## Server
+To start the server run
+
+```shell
+rails s
+Visit http://localhost:3000/
+```
+
+## Test suite
+
+This proyect counts with tests for the endpoints, to run then use the following command:
+
+```shell
+bundle exec Rspec
+```
